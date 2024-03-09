@@ -15,6 +15,18 @@ describe Spacecraft do
         spacecraft.move('b')
         expect(spacecraft.coordinates).to eq([0, -1, 0])
       end
+
+      it 'should turns right' do
+        spacecraft.move('r')
+        expect(spacecraft.coordinates).to eq([0, 0, 0])
+        expect(spacecraft.direction).to eq('E')
+      end
+
+      it 'should turns left' do
+        spacecraft.move('l')
+        expect(spacecraft.coordinates).to eq([0, 0, 0])
+        expect(spacecraft.direction).to eq('W')
+      end
     end
   end
 end
