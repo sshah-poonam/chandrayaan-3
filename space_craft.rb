@@ -9,6 +9,13 @@ class Spacecraft
     @direction = 'N'
   end
 
+  def execute(command)
+    command.each do |cmd|
+      move(cmd)
+    end
+    coordinates
+  end
+
   def move(command)
     case command
     when 'f'
