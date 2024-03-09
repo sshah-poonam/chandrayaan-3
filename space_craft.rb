@@ -10,6 +10,8 @@ class Spacecraft
     case command
     when 'f'
       move_forward
+    when 'b'
+      move_backward
     end
   end
 
@@ -33,6 +35,23 @@ class Spacecraft
       @z += 1
     when 'D'
       @z -= 1
+    end
+  end
+
+  def move_backward
+    case @direction
+    when 'N'
+      @y -= 1
+    when 'S'
+      @y += 1
+    when 'E'
+      @x -= 1
+    when 'W'
+      @x += 1
+    when 'U'
+      @z -= 1
+    when 'D'
+      @z += 1
     end
   end
 end
