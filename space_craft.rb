@@ -1,4 +1,7 @@
 class Spacecraft
+
+  attr_reader :direction
+
   def initialize
     @x = 0
     @y = 0
@@ -12,6 +15,10 @@ class Spacecraft
       move_forward
     when 'b'
       move_backward
+    when 'l'
+      turn_left
+    when 'r'
+      turn_right
     end
   end
 
@@ -53,5 +60,29 @@ class Spacecraft
     when 'D'
       @z += 1
     end
+  end
+
+  def turn_left
+    @direction = case @direction
+                 when 'N' then 'W'
+                 when 'W' then 'S'
+                 when 'S' then 'E'
+                 when 'E' then 'N'
+                 when 'U' then 'N'
+                 when 'D' then 'S'
+                 else @direction
+                 end
+  end
+
+  def turn_right
+    @direction = case @direction
+                 when 'N' then 'E'
+                 when 'E' then 'S'
+                 when 'S' then 'W'
+                 when 'W' then 'N'
+                 when 'U' then 'S'
+                 when 'D' then 'N'
+                 else @direction
+                 end
   end
 end
