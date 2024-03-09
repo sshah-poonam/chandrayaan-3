@@ -30,3 +30,21 @@ Given the starting point (0, 0, 0) following (x, y, z) and initial direction N, 
         * “l” - (0, 1, -1) - N
     4. Final Position: (0, 1, -1)
     5. Final Direction: N
+
+## Prerequisites
+  * Ruby 2.7.4
+  * Rspec 3.13.0
+
+## Getting Started
+
+1.  Clone this rails project into your local machine:
+
+    > `https://github.com/sshah-poonam/chandrayaan-3.git`
+
+2.  CD into your new local repository:
+
+    > `cd chandrayaan-3`
+
+3.  To run the Rspec:
+
+    > `rspec spec/space_craft_spec.rb`
