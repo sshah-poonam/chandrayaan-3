@@ -1,5 +1,4 @@
-class Spacecraft
-
+class SpaceCraft
   attr_reader :direction
 
   def initialize

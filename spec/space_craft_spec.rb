@@ -1,10 +1,10 @@
 require_relative '../space_craft'
 
-describe Spacecraft do
+describe SpaceCraft do
   context '#execute' do
 
     context 'individual commands' do
-      let(:spacecraft) { Spacecraft.new }
+      let(:spacecraft) { SpaceCraft.new }
 
       it 'should moves forward' do
         spacecraft.move('f')
@@ -42,7 +42,7 @@ describe Spacecraft do
     end
 
     context 'array of commands' do
-      let(:spacecraft) { Spacecraft.new }
+      let(:spacecraft) { SpaceCraft.new }
 
       it 'should return final position and direction' do
         coordinates = spacecraft.execute(['f', 'r', 'u', 'b', 'l'])
