@@ -19,6 +19,10 @@ class Spacecraft
       turn_left
     when 'r'
       turn_right
+    when 'u'
+      turn_up
+    when 'd'
+      turn_down
     end
   end
 
@@ -84,5 +88,13 @@ class Spacecraft
                  when 'D' then 'N'
                  else @direction
                  end
+  end
+
+  def turn_up
+    @direction = 'U'
+  end
+
+  def turn_down
+    @direction = 'D'
   end
 end
