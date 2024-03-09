@@ -40,5 +40,15 @@ describe Spacecraft do
         expect(spacecraft.direction).to eq('D')
       end
     end
+
+    context 'array of commands' do
+      let(:spacecraft) { Spacecraft.new }
+
+      it 'should return final position and direction' do
+        coordinates = spacecraft.execute(['f', 'r', 'u', 'b', 'l'])
+        expect(coordinates).to eq([0, 1, -1])
+        expect(spacecraft.direction).to eq('N')
+      end
+    end
   end
 end
