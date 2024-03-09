@@ -10,6 +10,11 @@ describe Spacecraft do
         spacecraft.move('f')
         expect(spacecraft.coordinates).to eq([0, 1, 0])
       end
+
+      it 'should moves backward' do
+        spacecraft.move('b')
+        expect(spacecraft.coordinates).to eq([0, -1, 0])
+      end
     end
   end
 end
